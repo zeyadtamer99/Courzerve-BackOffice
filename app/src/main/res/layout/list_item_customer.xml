@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/v"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <TextView
+                    android:id="@+id/customerName_tv_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="@+id/v"
+                    app:layout_constraintTop_toTopOf="@+id/v"
+                    tools:text="Islam" />
+
+                <TextView
+                    android:id="@+id/AppliedAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/customerName_tv_customer"
+
+                    app:layout_constraintTop_toBottomOf="@id/customerName_tv_customer"
+                    tools:text="Applied At: 12/04 5:35" />
+
+
+                <Button
+                    android:id="@+id/call_customer"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/status_circle"
+                    android:elevation="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/v"
+                    app:layout_constraintTop_toTopOf="@+id/v" />
+
+                <Button
+                    android:id="@+id/contact_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/mywhitebutton"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:padding="8dp"
+                    android:text="Contact"
+                    android:textColor="@color/realblue"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/AttendanceStatus_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <Button
+                    android:id="@+id/AttendanceStatus_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/mywhitebutton"
+                    android:drawableLeft="@drawable/ic_rounded"
+                    android:padding="8dp"
+                    android:text="Attendance"
+                    android:textColor="@color/realblue"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/PaymentStatus_btn"
+                    app:layout_constraintStart_toEndOf="@+id/contact_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <Button
+                    android:id="@+id/PaymentStatus_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/mywhitebutton"
+                    android:drawableLeft="@drawable/ic__coins"
+                    android:padding="8dp"
+                    android:text="Payment"
+                    android:textColor="@color/realblue"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/v"
+                    app:layout_constraintStart_toEndOf="@+id/AttendanceStatus_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+                <Button
+                    android:id="@+id/contact_btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/mybluebutton"
+                    android:drawableLeft="@drawable/ic_call_white"
+                    android:padding="8dp"
+                    android:text="Contact"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@id/AttendanceStatus_btn1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <Button
+                    android:id="@+id/AttendanceStatus_btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/mybluebutton"
+                    android:drawableLeft="@drawable/ic_rounded_white"
+                    android:padding="8dp"
+                    android:text="CONFIRMED"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@id/PaymentStatus_btn1"
+                    app:layout_constraintStart_toEndOf="@+id/contact_btn1"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <Button
+                    android:id="@+id/PaymentStatus_btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/mybluebutton"
+                    android:drawableLeft="@drawable/ic_coins_white"
+                    android:padding="8dp"
+                    android:text="Payment"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@+id/v"
+                    app:layout_constraintStart_toEndOf="@+id/AttendanceStatus_btn1"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+                <ImageView
+                    android:id="@+id/callImage_customer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="6dp"
+                    android:src="@drawable/ic_phone_white"
+                    app:layout_constraintBottom_toBottomOf="@+id/call_customer"
+                    app:layout_constraintEnd_toEndOf="@+id/call_customer"
+                    app:layout_constraintStart_toStartOf="@+id/call_customer"
+                    app:layout_constraintTop_toTopOf="@+id/call_customer" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="375dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/v"
+                    app:layout_constraintStart_toStartOf="@+id/v"
+                    app:layout_constraintTop_toBottomOf="@id/AppliedAt" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="375dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/v"
+                    app:layout_constraintStart_toStartOf="@+id/v"
+                    app:layout_constraintTop_toBottomOf="@id/contact_btn" />
+
+                <Button
+                    android:id="@+id/expand"
+                    android:layout_width="16dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_downwards"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/Age_customer"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:textSize="12sp"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/customerName_tv_customer"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/customerName_tv_customer"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/customerName_tv_customer"-->
+                <!--            tools:text="19 Years Old" />-->
+
+                <!--        <Button-->
+                <!--            android:id="@+id/test_btn"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:text="test"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/testTV"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/testTV"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/testTV" />-->
+
+                <!--        <Button-->
+                <!--            android:id="@+id/concerns_btn"-->
+                <!--            android:layout_width="30dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:layout_marginTop="10dp"-->
+                <!--            android:background="@drawable/concerns"-->
+                <!--            android:rotation="90"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/call_customer"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/call_customer"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/call_customer" />-->
+
+                <!--        <Spinner-->
+                <!--            android:id="@+id/ContactedBy_spinner"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/contactedCheckBox"-->
+                <!--android:layout_marginStart="12dp"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/yousef"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/contactedCheckBox" />-->
+                <!--        <CheckBox-->
+                <!--            android:id="@+id/contactedCheckBox"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginStart="12dp"-->
+                <!--            android:layout_marginTop="6dp"-->
+                <!--            android:text="Contacted"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/AppliedAt" />-->
+
+                <!--        <CheckBox-->
+                <!--            android:id="@+id/AttendanceCheckBox"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="6dp"-->
+                <!--            android:text="Attended First Session"-->
+                <!--            app:layout_constraintStart_toStartOf="@id/contactedCheckBox"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/contactedCheckBox" />-->
+
+                <!--        <CheckBox-->
+                <!--            android:id="@+id/PaymentStatusCheckBox"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="6dp"-->
+                <!--            android:text="Has Paid"-->
+                <!--            app:layout_constraintStart_toStartOf="@id/AttendanceCheckBox"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/AttendanceCheckBox" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/PaymentDate"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:hint="Enter Date"-->
+                <!--            android:padding="6dp"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textSize="16sp"-->
+                <!--            android:textStyle="italic"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/collectionMethodET"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/collectionMethodET"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/collectionMethodET" />-->
+
+                <!--        <ImageView-->
+                <!--            android:id="@+id/MoneyIV"-->
+                <!--            android:layout_width="30dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:src="@drawable/money"-->
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            app:layout_constraintStart_toStartOf="@id/PaymentStatusCheckBox"-->
+                <!--            app:layout_constraintTop_toBottomOf="@id/PaymentStatusCheckBox" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/PaymentAmountET"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:hint="Amount"-->
+                <!--            android:imeOptions="actionDone"-->
+                <!--            android:padding="6dp"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textSize="16sp"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/MoneyIV"-->
+                <!--            app:layout_constraintStart_toEndOf="@id/collectionMethodsp"-->
+                <!--            app:layout_constraintTop_toTopOf="@id/MoneyIV" />-->
+
+                <!--        <Button-->
+                <!--            android:id="@+id/btn_date"-->
+                <!--            android:layout_width="28dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:layout_marginStart="6dp"-->
+                <!--            android:background="@drawable/date"-->
+                <!--            android:padding="6dp"-->
+                <!--            android:textColor="@color/white"-->
+                <!--            android:textSize="16sp"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/PaymentDateET"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/PaymentAmountET" />-->
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/PaymentDateET"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginStart="4dp"-->
+                <!--            android:text="26-03-2021"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textSize="16sp"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/PaymentAmountET"-->
+                <!--            app:layout_constraintStart_toEndOf="@id/PaymentAmountET"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/PaymentAmountET" />-->
+
+                <!--        <Spinner-->
+                <!--            android:id="@+id/collectionMethodsp"-->
+                <!--            android:layout_width="120dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:padding="7dp"-->
+                <!--            android:visibility="visible"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/PaymentAmountET"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/MoneyIV"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/PaymentAmountET" />-->
+
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/collectionMethodET"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:hint="Method"-->
+                <!--            android:imeOptions="actionNext"-->
+                <!--            android:inputType="text"-->
+                <!--            android:padding="6dp"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textSize="16sp"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/MoneyIV"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/PaymentAmountET"-->
+                <!--            app:layout_constraintTop_toTopOf="@id/MoneyIV" />-->
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/testTV"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="match_parent"-->
+                <!--            android:textColor="@color/Blue"-->
+                <!--            android:textSize="32sp"-->
+                <!--            app:layout_constraintBottom_toTopOf="@+id/PaymentDate"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/v"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/AttendanceCheckBox"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/AppliedAt" />-->
+
+
+                <!--        <Button-->
+                <!--            android:id="@+id/karim"-->
+                <!--            android:layout_width="60dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:layout_marginStart="8dp"-->
+                <!--            android:background="@drawable/karim_btn"-->
+                <!--            android:text="Karim"-->
+                <!--            android:textColor="@color/white"-->
+                <!--            android:textSize="15sp"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/contactedCheckBox"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/contactedCheckBox"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/contactedCheckBox" />-->
+
+                <!--        <Button-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:drawableLeft="@drawable/ic_search"-->
+                <!--            android:text="press here"-->
+                <!--            android:textAllCaps="false"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/PaymentAmountET"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/v"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/yousef" />-->
+
+                <!--        <Button-->
+                <!--            android:id="@+id/yousef"-->
+                <!--            android:layout_width="60dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:background="@drawable/yousef_btn"-->
+                <!--            android:text="Yousef"-->
+                <!--            android:textColor="@color/white"-->
+                <!--            android:textSize="15sp"-->
+                <!--            app:layout_constraintBottom_toBottomOf="@+id/karim"-->
+                <!--            app:layout_constraintStart_toEndOf="@+id/karim"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/karim" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/expandableView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Age"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/customerAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="19" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Email"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/customerEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="ztamer2001@gmail.ocm" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Phone Number"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/customerNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="01029298885" />
+
+                <Button
+                    android:id="@+id/editData_btn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/mywhitebutton"
+                    android:drawableLeft="@drawable/ic_baseline_edit_24"
+                    android:padding="8dp"
+android:layout_marginBottom="6dp"
+                    android:text="Edit Data"
+                    android:textColor="@color/realblue"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Using..."
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="24dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black"/>
+
+
+    <Button
+android:layout_marginTop="16dp"
+        android:id="@+id/whatsapp_customer_dialog"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/whatsapplogoreal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/call_customer_dialog"
+
+        />
+    <Button
+
+        android:id="@+id/call_customer_dialog"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/status_circle"
+        app:layout_constraintStart_toEndOf="@id/whatsapp_customer_dialog"
+        app:layout_constraintTop_toTopOf="@id/whatsapp_customer_dialog"
+        app:layout_constraintBottom_toBottomOf="@id/whatsapp_customer_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+       />
+
+    <ImageView
+        android:id="@+id/callImage_customer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_phone_white"
+        app:layout_constraintBottom_toBottomOf="@+id/call_customer_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/call_customer_dialog"
+        app:layout_constraintStart_toStartOf="@+id/call_customer_dialog"
+        app:layout_constraintTop_toTopOf="@+id/call_customer_dialog" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_round"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/customerName_tv_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/v"
+            app:layout_constraintTop_toTopOf="@+id/v"
+            tools:text="Islam" />
+
+        <TextView
+            android:id="@+id/Age_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/customerName_tv_customer"
+            app:layout_constraintStart_toStartOf="@+id/customerName_tv_customer"
+            app:layout_constraintTop_toBottomOf="@+id/customerName_tv_customer"
+            tools:text="19 Years Old" />
+
+        <TextView
+            android:id="@+id/AppliedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+app:layout_constraintTop_toBottomOf="@id/Age_customer"
+            app:layout_constraintEnd_toEndOf="@+id/Age_customer"
+            app:layout_constraintStart_toStartOf="@+id/Age_customer"
+            tools:text="25/02/2020" />
+
+        <Button
+            android:id="@+id/call_customer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/status_circle"
+            app:layout_constraintEnd_toEndOf="@+id/v"
+            app:layout_constraintTop_toTopOf="@+id/customerName_tv_customer" />
+
+        <ImageView
+            android:id="@+id/callImage_customer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:elevation="4dp"
+            android:src="@drawable/phone_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/call_customer"
+            app:layout_constraintEnd_toEndOf="@+id/call_customer"
+            app:layout_constraintStart_toStartOf="@+id/call_customer"
+            app:layout_constraintTop_toTopOf="@+id/call_customer" />
+
+        <CheckBox
+            android:id="@+id/contactedCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:text="Contacted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AppliedAt" />
+
+        <CheckBox
+            android:id="@+id/AttendanceCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Attended First Session"
+            app:layout_constraintStart_toStartOf="@id/contactedCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/contactedCheckBox" />
+
+        <CheckBox
+            android:id="@+id/PaymentStatusCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Payment Status"
+            app:layout_constraintStart_toStartOf="@id/AttendanceCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/AttendanceCheckBox" />
+
+        <Spinner
+            android:id="@+id/dropdown_Contact"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/contactedCheckBox"
+            app:layout_constraintTop_toTopOf="@+id/contactedCheckBox" />
+
+        <!--    <Button
+               android:id="@+id/btnDate"
+               android:layout_width="0dp"
+               android:layout_height="30dp"
+               android:layout_marginStart="16dp"
+               android:layout_marginEnd="16dp"
+               android:background="@drawable/mybutton"
+               android:textColor="@android:color/white"
+               app:layout_constraintBottom_toBottomOf="@+id/PaymentStatusCheckBox"
+               app:layout_constraintEnd_toEndOf="@+id/v"
+               app:layout_constraintStart_toEndOf="@+id/PaymentStatusCheckBox" /> -->
+        <!--  <ImageView
+                  android:id="@+id/dateIV"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:elevation="5dp"
+                  android:src="@drawable/date"
+                  android:layout_marginEnd="8dp"
+                  app:layout_constraintBottom_toBottomOf="@id/btnDate"
+                  app:layout_constraintEnd_toEndOf="@+id/btnDate"
+                  app:layout_constraintTop_toTopOf="@id/btnDate" />  -->
+        <TextView
+            android:id="@+id/PaymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/collectionMethodTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/collectionMethodTV"
+            app:layout_constraintTop_toTopOf="@+id/collectionMethodTV"
+            tools:text="25/12/2020" />
+
+           <ImageView
+               android:id="@+id/MoneyIV"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/money"
+               app:layout_constraintTop_toBottomOf="@id/PaymentStatusCheckBox"
+               app:layout_constraintStart_toStartOf="@id/PaymentStatusCheckBox"
+               app:layout_constraintBottom_toBottomOf="parent" />
+
+           <TextView
+               android:id="@+id/PaymentAmountTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:layout_marginStart="8dp"
+               android:textSize="20sp"
+               app:layout_constraintBottom_toBottomOf="@+id/MoneyIV"
+               app:layout_constraintStart_toEndOf="@id/MoneyIV"
+               app:layout_constraintTop_toTopOf="@id/MoneyIV"
+               tools:text="1660" />
+           <TextView
+               android:id="@+id/collectionMethodTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:layout_marginStart="16dp"
+               android:textSize="20sp"
+               app:layout_constraintBottom_toBottomOf="@+id/MoneyIV"
+               app:layout_constraintStart_toEndOf="@id/PaymentAmountTV"
+               app:layout_constraintTop_toTopOf="@id/MoneyIV"
+               tools:text="Vodafone Cash" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.cardview.widget.CardView>
